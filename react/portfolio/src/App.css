@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face{
+  font-family : "SCDream1";
+  src : local('./font/SCDream1.otf')
+}

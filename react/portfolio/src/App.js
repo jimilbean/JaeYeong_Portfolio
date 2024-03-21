@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-import styled, { createGlobalStyle } from 'styled-components';
-import { Fragment } from 'react';
-import MainContainer from './components/Container';
-import FirstSection from './components/first_section/FirstSection';
+import styled, { createGlobalStyle } from "styled-components";
+import { Fragment } from "react";
+import LeftSection from "./components/section/left_section/LeftSection";
+import RightSection from "./components/section/right_section/RightSection";
+import Footer from "./components/footer/Footer";
+
 
 const GlobalStyles = createGlobalStyle`
 
@@ -23,11 +25,15 @@ const GlobalStyles = createGlobalStyle`
       font-size: 10px;
       vertical-align: baseline;
   }
+  html {
+    height : 100%
+  }
   body{
       line-height: 1;
       font-family: 'Noto Sans KR', sans-serif;
-      background-color: #F6F9F0;
+      background-color: #000000;
       margin-bottom: 100px;
+      height : 100%
   }
   ol, ul{
       list-style: none;
@@ -39,12 +45,35 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const VerticalContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+`;
+
+const HorizontalContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding : 10px;
+`;
+
 function App() {
   return (
     <Fragment>
-        <FirstSection>
-           
-        </FirstSection>
+      <GlobalStyles />
+      <VerticalContainer>
+        <HorizontalContainer>
+          <LeftSection></LeftSection>
+          <RightSection></RightSection>
+        </HorizontalContainer>
+        <Footer></Footer>
+      </VerticalContainer>
     </Fragment>
   );
 }
