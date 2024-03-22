@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import styled, { createGlobalStyle } from "styled-components";
@@ -24,13 +23,13 @@ const GlobalStyles = createGlobalStyle`
       border: 0;
       font-size: 10px;
       vertical-align: baseline;
+      font-family: 'SCDream7' !important;
   }
   html {
     height : 100%
   }
   body{
       line-height: 1;
-      font-family: 'Noto Sans KR', sans-serif;
       background-color: #000000;
       margin-bottom: 100px;
       height : 100%
@@ -47,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
 
 const VerticalContainer = styled.div`
   width: 100%;
+  min-width: 1200px;
   height: 100%;
   display: flex;
   flex-direction: column;

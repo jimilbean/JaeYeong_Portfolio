@@ -1,5 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Typewriter from 'typewriter-effect'
+
+export default function HeaderLogo(){
+
+    return(
+        <LogoSectionDesign>
+            <LogoDesign>
+                <Typewriter
+                    options={{
+                        strings : "『 Yeong DevLog. 』",
+                        autoStart : true,
+                        delay : 150,
+                        pauseFor : 5000,
+                        loop : true,
+                        wrapperClassName : "LogoName"
+                    }}
+                />
+            
+            </LogoDesign>
+        </LogoSectionDesign>
+    )
+}
 
 const LogoSectionDesign = styled.div`
     width : 100%;
@@ -12,17 +34,9 @@ const LogoSectionDesign = styled.div`
 `
 
 const LogoDesign = styled.div`
-    color : white;
-    font-size : 25px;
-    font-family : 'SCDream1';
+    &>div>span{
+        color : #1ed55f;
+        font-size : 25px;
+        font-family: 'SCDream9' !important;
+    }
 `
-
-export default function HeaderLogo(){
-    return(
-        <LogoSectionDesign>
-            <LogoDesign>
-                Yeong's Portfolio
-            </LogoDesign>
-        </LogoSectionDesign>
-    )
-}
