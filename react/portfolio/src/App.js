@@ -28,12 +28,19 @@ const GlobalStyles = createGlobalStyle`
   html {
     height : 100%
   }
+
   body{
       line-height: 1;
       background-color: #000000;
       margin-bottom: 100px;
       height : 100%
   }
+
+  /* 스크롤바 전체 기본 꾸미기 */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   ol, ul{
       list-style: none;
   }
